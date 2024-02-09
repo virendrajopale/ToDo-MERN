@@ -10,7 +10,7 @@ const connectDb = (): void => {
             })
             .catch((error: Error) => {
                 console.log(error);
-                // process.exit(1); //stop the connection
+                // process.exit(1); 
             });
     }
 };
