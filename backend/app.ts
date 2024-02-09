@@ -17,7 +17,7 @@ app.use('/todo',toDoRouter);
 if(config.server.port && config.server.host){
 
   app.listen(Number(config.server.port),config.server.host ,() => {
-    console.log(`Server is running on port http//${config.server.host}:${config.server.port}`);
+    console.log(`Server is running on port http://${config.server.host}:${config.server.port}`);
 
   });
 }
