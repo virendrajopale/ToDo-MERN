@@ -5,7 +5,7 @@ const connectDb = (): void => {
  
     if (config.mongo.url) {
         mongoose.connect(config.mongo.url,{retryWrites:true,w:"majority"})
-            .then((Response) => {
+            .then(() => {
                 console.log("Connected to database");
             })
             .catch((error: Error) => {
