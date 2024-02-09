@@ -1,6 +1,11 @@
 import dotenv from 'dotenv'
 
-dotenv.config({path:'backend/.env'})
+
+if(process.env.NODE_ENV!=="PRODUCTION"){
+
+
+    dotenv.config({path:'backend/.env'})
+}
 
 const MONGO_USER=process.env.MONGO_USER || '';
 const MONGO_PASS=process.env.MONGO_PASS || '';
