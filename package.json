@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "ts-node --esm  ./backend/app.ts ",
     "build": " cd backend && npm install && npm run build  && cd ../frontend && npm install && npm run build",
-    "start": "  node backend/dist/app.js && cd frontend && npm start",
+    "start": "  nodemon ./backend/dist/app.js ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -19,14 +19,16 @@
     "bcrypt": "^5.1.1",
     "config": "^3.3.11",
     "cookie-parser": "^1.4.6",
-    "dotenv": "^16.4.1",
     "express": "^4.18.2",
     "http": "^0.0.1-security",
-    "mongoose": "^8.1.1"
+    "mongoose": "^8.1.1",
+    "dotenv": "^16.4.1"
   },
   "devDependencies": {
     "@types/config": "^3.3.3",
     "@types/cookie-parser": "^1.4.6",
+    "@types/dotenv": "^8.2.0",
+    "dotenv": "^16.4.1",
     "typescript": "^5.3.3"
   }
 }
