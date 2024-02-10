@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "ts-node --esm  ./backend/app.ts ",
     "build": " cd backend && npm install && npm run build  && cd ../frontend && npm install && npm run build",
-    "start": "  node backend/dist/app.js",
+    "start": "  node backend/dist/app.js && cd frontend && npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
