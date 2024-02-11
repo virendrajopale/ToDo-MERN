@@ -5,10 +5,9 @@ services:
       context: .
       target: development
     volumes:
-      - ./:/usr/src/app
-      - /usr/sr/app/node_modules
+      - .:/app
+      - /app/node_modules
     ports:
       - 4000:4000
     command: npm run dev
       
-        

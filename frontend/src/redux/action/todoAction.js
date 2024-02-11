@@ -1,5 +1,5 @@
 import {createAsyncThunk} from '@reduxjs/toolkit'
-import axios, { Axios } from 'axios'
+import axios from 'axios'
 export const getTodos=createAsyncThunk('getTodos',async(_,{rejectWithValue})=>{
 
     

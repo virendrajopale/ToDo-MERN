@@ -5,9 +5,9 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { getTodos } from '../redux/action/todoAction';
 
-function TodoList({  }) {
+function TodoList() {
   const dispatch = useDispatch();
-  const { todos, loading, error } = useSelector(state => state.todo);
+  const { todos} = useSelector(state => state.todo);
 
   useEffect(() => {
     dispatch(getTodos());
