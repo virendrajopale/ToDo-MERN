@@ -2,6 +2,7 @@ import express from 'express'
 import cookie_parser from 'cookie-parser'
 import toDoRouter from './Routes/TodoRoute';
 import connectDb from './config/database';
+import cors from 'cors'
 import { config } from './config/config';
 const app:express.Application= express();
 
@@ -9,7 +10,7 @@ connectDb()
 app.use(express.json());
 app.use(cookie_parser())
 app.use(express.urlencoded({extended:true}))
-
+app.use(cors());
 app.use('/todo',toDoRouter);
 
 

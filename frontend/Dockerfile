@@ -1,15 +1,23 @@
-FROM node:16-alpine 
+# Use official Node.js image as base
+FROM node:16-alpine
 
+# Set working directory
 WORKDIR /app
 
-COPY package*.json .
+# Copy package.json and package-lock.json to workdir
+COPY package*.json ./
 
+# Install dependencies
 RUN npm install
 
+# Copy the rest of the application code
 COPY . .
 
+# Build your React app
 RUN npm run build
 
-EXPOSE 4000
+# Expose the port your app runs on (if necessary)
+EXPOSE 3000
 
-CMD [ "npm","start" ]
+# Command to run the application (if necessary)
+CMD ["npm", "start"]
