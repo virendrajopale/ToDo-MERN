@@ -26,6 +26,7 @@
     "mongoose": "^8.1.1"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@types/config": "^3.3.3",
     "@types/cookie-parser": "^1.4.6",
     "@types/dotenv": "^8.2.0",
